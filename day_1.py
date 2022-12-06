@@ -18,12 +18,12 @@ def find_positional_value(input_dict, search_key='total', position=-1):
     return positional_val
 
 
-f = open('day_1/input.txt')
-
 elf_dict = {}
 elf_number = 1
 
 new_elf = True
+
+f = open('day_1/input.txt')
 
 for line in f.readlines():
 
@@ -38,6 +38,8 @@ for line in f.readlines():
         calorie_value = int(line.strip())
         elf_dict['elf_%d' % elf_number]['individual'].append(calorie_value)
         elf_dict['elf_%d' % elf_number]['total'] += calorie_value
+
+f.close()
 
 # Part 1: Find maximum calorie value any elf has
 
